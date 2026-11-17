@@ -1,0 +1,128 @@
+{
+  "groups": {
+    "stredni_dodavky": {
+      "name": "Střední dodávky",
+      "models": [
+        {
+          "make": "Peugeot",
+          "model": "Expert",
+          "notes": "2.0 HDi (2007+) běžný a jednoduchý; sdílená platforma s Jumpy/Scudo/ProAce."
+        },
+        {
+          "make": "Citroën",
+          "model": "Jumpy",
+          "notes": "Technické dvojče Experta."
+        },
+        {
+          "make": "Fiat",
+          "model": "Scudo",
+          "notes": "Technické dvojče Experta."
+        },
+        {
+          "make": "Toyota",
+          "model": "ProAce",
+          "match": [
+            "proace",
+            "pro ace"
+          ],
+          "notes": "Technické dvojče Experta."
+        },
+        {
+          "make": "Opel",
+          "model": "Vivaro",
+          "notes": "Vivaro A/B (Trafic platforma); Vivaro C je koncernové dvojče."
+        },
+        {
+          "make": "Renault",
+          "model": "Trafic",
+          "notes": "1.9 dCi / 2.0 dCi; pozor na rozvody a vstřikovače."
+        },
+        {
+          "make": "Nissan",
+          "model": "Primastar",
+          "notes": "Trafic platforma."
+        },
+        {
+          "make": "Volkswagen",
+          "model": "Transporter",
+          "notes": "1.9 TDI / 2.5 TDI; T5."
+        },
+        {
+          "make": "Ford",
+          "model": "Transit Custom",
+          "notes": "2.2 TDCi."
+        },
+        {
+          "make": "Mercedes-Benz",
+          "model": "Vito",
+          "notes": "W639 CDI."
+        }
+      ]
+    },
+    "starsi_mpv": {
+      "name": "Starší velkoprostorová MPV",
+      "models": [
+        {
+          "make": "Volkswagen",
+          "model": "Sharan",
+          "notes": "1.9 TDI PD (85/96/110 kW) klasika (1. gen do 2010), 2.0 TDI (2. gen); dvojče Alhambra/Galaxy I."
+        },
+        {
+          "make": "Seat",
+          "model": "Alhambra",
+          "notes": "Technické dvojče Sharanu (1. i 2. generace); často lepší poměr cena/výbava."
+        },
+        {
+          "make": "Ford",
+          "model": "Galaxy",
+          "notes": "1. generace (do 2006) dvojče Sharanu s 1.9 TDI; 2. generace (2006+) vlastní platforma Mondea (2.0 TDCi)."
+        },
+        {
+          "make": "Ford",
+          "model": "S-Max",
+          "match": [
+            "s-max",
+            "smax",
+            "s max"
+          ],
+          "notes": "Sportovněji střižené dvojče Galaxy (2006+); 2.0 TDCi PSA/Ford."
+        },
+        {
+          "make": "Renault",
+          "model": "Espace",
+          "notes": "Espace IV (2002–2014) obrovský prostor; brát ideálně po faceliftu s motorem 2.0 dCi."
+        },
+        {
+          "make": "Peugeot",
+          "model": "807",
+          "notes": "Eurovan 2 (2002–2014); 2.0 HDi / 2.2 HDi, šoupací dveře; dvojče C8/Ulysse/Phedra."
+        },
+        {
+          "make": "Citroën",
+          "model": "C8",
+          "notes": "Technické dvojče Peugeotu 807."
+        },
+        {
+          "make": "Fiat",
+          "model": "Ulysse",
+          "notes": "2. generace (2002–2010); technické dvojče Peugeotu 807."
+        },
+        {
+          "make": "Lancia",
+          "model": "Phedra",
+          "notes": "Luxusnější dvojče Peugeotu 807; motory 2.0 / 2.2 JTD (HDi)."
+        },
+        {
+          "make": "Volkswagen",
+          "model": "Touran",
+          "notes": "Menší kompaktní MPV (1T1/1T2/1T3); 1.9 TDI (77 kW) nebo 2.0 TDI BMM, pozor na korozi prahů a pátých dveří."
+        },
+        {
+          "make": "Opel",
+          "model": "Zafira",
+          "notes": "Zafira B (2005–2011); 7 míst (systém Flex7), spolehlivé diesely 1.9 CDTI (Fiat JTD)."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>Citroën bazar - Auto | Bazoš.cz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Kategorie Citroën bazar. Vybírejte z 3 453 inzerátů. Prodej snadno a rychle na Bazoši. Přes půl milionů uživatelů za den."><meta property="og:title" content="Citroën bazar - Auto">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bazos.cz">
+<meta property="og:description" content="Kategorie Citroën bazar. Vybírejte z 3 453 inzerátů. Prodej snadno a rychle na Bazoši. Přes půl milionů uživatelů za den.">
+<link rel="canonical" href="https://auto.bazos.cz/citroen/"><meta property="fb:admins" content="1055875657">
+<link rel="stylesheet" href="https://www.bazos.cz/bazos70s.css" type="text/css"><link rel="preload" as="image" href="https://www.bazos.cz/obrazky/bazos.svg">
+<link rel="stylesheet" href="https://www.bazos.cz/bazosprint.css" type="text/css" media="print">
+<link rel="icon" href="https://www.bazos.cz/favicon.svg" type="image/svg+xml">
+<link rel="icon" HREF="https://www.bazos.cz/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://www.bazos.cz/apple-touch-icon.png">
+<script async src="https://fundingchoicesmessages.google.com/i/pub-3645948300403337?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z7swtl3rz0");
+    clarity('set', 'pp', '40');
+</script><script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
+<script type="text/javascript" charset="utf-8">
+(function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
+  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
+</script><script>
+var xhr = new XMLHttpRequest();
+var naseptavac_value = '';
+function naseptavac(value) {
+  if (value=='')  {
+  	naseptavac_value = '';
+  	document.getElementById('vysledek').innerHTML='';
+  	}
+else {
+	if (naseptavac_value == value) {
+		return false;
+	}
+	naseptavac_value = value;
+	setTimeout(function () {
+		if (naseptavac_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavac_value == value){
+				document.getElementById('vysledek').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggest.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('rubnas=AU&catnas=82&qnas='+encodeURIComponent(naseptavac_value));
+	}, 250);
+}
+}
+
+var naseptavacpsc_value = '';
+function naseptavacpsc(value) {
+  if (value=='')  {
+  	naseptavacpsc_value = '';
+  	document.getElementById('vysledekpsc').innerHTML='<table cellpadding=\"3\" cellspacing=\"0\" class=\"tablenaspsc\"><tr><td class=\"act\" onclick=\"getLocation();\"><b>Inzeráty v okolí</b></td></tr></table>';
+  	}
+else {
+	if (naseptavacpsc_value == value) {
+		return false;
+	}
+	naseptavacpsc_value = value;
+	setTimeout(function () {
+		if (naseptavacpsc_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavacpsc_value == value){
+				document.getElementById('vysledekpsc').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggestpsc.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('qnaspsc='+encodeURIComponent(naseptavacpsc_value));
+	}, 250);
+}
+}
+
+function getLocation() {
+if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(showPosition);}
+else {document.getElementById('hlokalita').value = '';}
+}
+function showPosition(position) {
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4){
+				document.getElementById('hlokalita').value = this.responseText;
+				document.forms['formt'].submit();
+			}
+ 		 };
+		xhr.open("POST", '/zip.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('latitude='+encodeURIComponent(position.coords.latitude)+'&longitude='+encodeURIComponent(position.coords.longitude));
+}
+
+var agent_value = '';
+function agentclick() {
+  if (document.getElementById('agentmail').value=='')  {
+  	document.getElementById("agentmail").focus();
+    return false;
+  	}
+else {
+agent_value = document.getElementById('agentmail').value;
+xhr.onreadystatechange = function() {
+  if (this.readyState == 4){
+				document.getElementById('overlay').innerHTML = this.responseText;
+			}
+  };
+xhr.open("POST", '/agent.php');
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.send('hledat=&rubrikav=AU&hlokalita=&humkreis=&cenaod=&cenado=&cat=82&typ=&agentmail='+encodeURIComponent(agent_value));
+}
+}
+
+function odeslatrequest(value,params) {
+xhr.onreadystatechange = function() {
+  if (this.readyState == 4){
+				document.getElementById('overlay').innerHTML = this.responseText;
+			}
+  };
+xhr.open("POST", value);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.send(params);
+}
+function overlay() {
+	el = document.getElementById("overlay");
+	el.style.display = (el.style.display == "inline") ? "none" : "inline";
+}
+function odeslatakci(postaction,value1,value2,value3) {
+document.getElementById('postaction').value = postaction;
+document.getElementById("postv1").value = value1;
+document.getElementById("postv2").value = value2;
+document.getElementById("postv3").value = value3;
+document.formaction.submit();
+}
+</script>
+</head>
+
+<body>
+
+
+<div class="sirka">
+<div class="listalogor">
+<div class="listalogol"><a href="https://www.bazos.cz/" title="Bazos.cz - Inzerce, bazar"><img src="https://www.bazos.cz/obrazky/bazos.svg" width="199" height="34" alt="Bazos.cz - Inzerce, inzeráty"></a></div>
+<div class="listalogom"><b>... bazar pro každého</b></div>
+<div class="listalogop"><a href="https://www.bazos.cz/oblibene.php"><b>Oblíbené inzeráty</b></a> <a href="https://www.bazos.cz/moje-inzeraty.php"><b>Moje inzeráty</b></a> <a href="/pridat-inzerat.php"><b><span class=pridati>Přidat inzerát</span></b></a></div>
+</div>
+<form name="formt" id="formt" method=get >
+<div class="listah">
+<div class="rubriky">
+<b>
+Co: <span class=vysokoli><span id="vysledek"></span><input type="search" onkeyup="naseptavac(this.value);" id=hledat name=hledat size="17" maxlength="256" value="" autocomplete="off" title="Co? Vyhledávaný výraz"></span>
+
+<select name="rubriky" onchange='this.form.submit();' title="Vyber rubriku">
+<option value="www">Všechny rubriky</option>
+<option value="auto" selected>Auto</option><option value="deti">Děti</option><option value="dum">Dům a zahrada</option><option value="elektro">Elektro</option><option value="foto">Foto</option><option value="hudba">Hudba</option><option value="knihy">Knihy</option><option value="mobil">Mobily</option><option value="motorky">Motorky</option><option value="nabytek">Nábytek</option><option value="obleceni">Oblečení</option><option value="pc">PC</option><option value="prace">Práce</option><option value="reality">Reality</option><option value="sluzby">Služby</option><option value="sport">Sport</option><option value="stroje">Stroje</option><option value="vstupenky">Vstupenky</option><option value="zvirata">Zvířata</option><option value="ostatni">Ostatní</option></select>
+
+Lokalita: <span class=vysokolipsc><span id="vysledekpsc"></span><input type="search" name="hlokalita" id="hlokalita" onkeyup="naseptavacpsc(this.value);" onclick="naseptavacpsc(this.value);" value="" size="4" maxlength="25" autocomplete="off" title="Kde? PSČ (místo)" style="-webkit-appearance: none;"></span>
+Okolí: <input name="humkreis" title="Okolí v km" value="25" size="3" style="width: 25px;"> km
+Cena od: <input name=cenaod title="Cena od Kč" maxlength="12" size="5" value=""> - do: <input name=cenado title="Cena do Kč" maxlength="12" size="5" value=""> Kč <input type="submit" name="Submit" value="Hledat">
+<input type="hidden" name="order" id="order"><input type="hidden" name="crp" id="crp"><input type="hidden" id="kitx" name="kitx" value="ano"></b>
+</div>
+</div>
+</form>
+<div class="drobky"><a href="https://www.bazos.cz/" title="Inzerce Bazoš">Hlavní stránka</a>  > <a href="https://auto.bazos.cz">Auto</a> > <h1 class="nadpiskategorie">Citroën</h1></div>
+<br>
+
+
+<div class="flexmain"><div class="menuleft"><div class="nadpismenu">Osobní auta</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="/alfa/" >Alfa Romeo</a>
+<a href="/audi/" >Audi</a>
+<a href="/bmw/" >BMW</a>
+<a href="/citroen/"  id=zvyraznenikat>Citroën</a>
+<a href="/dacia/" >Dacia</a>
+<a href="/fiat/" >Fiat</a>
+<a href="/ford/" >Ford</a>
+<a href="/honda/" >Honda</a>
+<a href="/hyundai/" >Hyundai</a>
+<a href="/chevrolet/" >Chevrolet</a>
+<a href="/kia/" >Kia</a>
+<a href="/mazda/" >Mazda</a>
+<a href="/mercedes/" >Mercedes-Benz</a>
+<a href="/mitsubishi/" >Mitsubishi</a>
+<a href="/nissan/" >Nissan</a>
+<a href="/opel/" >Opel</a>
+<a href="/peugeot/" >Peugeot</a>
+<a href="/renault/" >Renault</a>
+<a href="/seat/" >Seat</a>
+<a href="/suzuki/" >Suzuki</a>
+<a href="/skoda/" >Škoda</a>
+<a href="/toyota/" >Toyota</a>
+<a href="/volkswagen/" >Volkswagen</a>
+<a href="/volvo/" >Volvo</a>
+<a href="/ostatni/" >Ostatní značky</a>
+<br>
+<a href="https://elektro.bazos.cz/autoradia/">Autorádia</a>
+<a href="https://pc.bazos.cz/gps/">GPS navigace</a>
+<a href="/havarovana/" >Havarovaná auta</a>
+<a href="/nahradnidily/" >Náhradní díly</a>
+<a href="/pneumatiky/" >Pneumatiky, kola</a>
+<a href="/prislusenstvi/" >Příslušenství</a>
+<a href="/tuning/" >Tuning</a>
+<a href="/veterani/" >Veteráni</a>
+</div></div>
+
+<br>
+<div class="nadpismenu">Užitková vozidla</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="/autobusy/" >Autobusy</a>
+<a href="/dodavka/" >Dodávky</a>
+<a href="/mikrobus/" >Mikrobusy</a>
+<a href="/karavany/" >Karavany, obytná auta</a>
+<a href="/nakladni/" >Nákladní auta</a>
+<a href="/pickup/" >Pick-up</a>
+<a href="/voziky/" >Vozíky, přívěsy</a>
+<a href="https://stroje.bazos.cz/">Stroje</a>
+<a href="/ostatniuzitkova/" >Ostatní</a>
+<br>
+<a href="/havarovanauzitkova/" >Havarovaná</a>
+<a href="/nahradnidilyuzitkova/" >Náhradní díly</a>
+</div>
+</div>
+<br>
+
+<div class="nadpismenu">Moto</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="https://motorky.bazos.cz/">Motorky, Skútry</a>
+</div></div>
+
+<br><div class="mobilskryt" style="text-align: center;">
+<a style="font-size: 13px;text-decoration: none;color:#000000;" href="https://www.jasminka.cz/kniha/jiri-janca-josef-a-zentrich-herbar-lecivych-rostlin-komplet-1-7dil.html" target="_blank" rel=”nofollow”><b>Knihkupectví Jasmínka</b><br>
+<span style="font-size: 13px;text-decoration: none;color:#ff6600;">
+<span style="color:#000000;">Jiří Janča, Josef A. Zentrich:</span> Herbář léčivých rostlin - komplet 1.-7.díl<br><img src="https://www.jasminka.cz/images/v/herbarcv.jpg" width="100" alt="Knihkupectví Jasmínka" title="Knihkupectví Jasmínka" style="border: 1px solid Black;margin: 4px;">
+<br>
+<img src="https://www.bazos.cz/kosik.svg" alt="Jasminka" height="22" style="border: 0px;"> koupit</span></a></div>
+
+</div><div class="maincontent">
+
+
+<div class="listainzerat inzeratyflex">
+<div class="inzeratynadpis"><img src="https://www.bazos.cz/obrazky/list.gif" width="18" height="16" alt="List inzerátů" class=gallerylista> <form name="formgal" id="formgal" method="post" style="display: inline;"><input type="hidden" name="gal" value="g"><input type="image" alt="Submit" src="https://www.bazos.cz/obrazky/gallery.gif" width="18" height="16" class="gallerylist inputgal"></form> Zobrazeno 1-40 inzerátů z 3 453</div>
+<div class="inzeratycena"><b><span onclick="document.getElementById('order').value=1;document.forms['formt'].submit();" class="paction">Cena</span></b></div>
+<div class="inzeratylok">Lokalita</div>
+<div class="inzeratyview"><span onclick="document.getElementById('order').value=3;document.forms['formt'].submit();" class="paction">Zobrazeno</span></div>
+</div><form name="formaction" method="post" style="display: inline;"><input type="hidden" id="postaction" name="postaction" value=""><input type="hidden" id="postv1" name="postv1" value=""><input type="hidden" id="postv2" name="postv2" value=""><input type="hidden" id="postv3" name="postv3" value=""></form><button type="button" onclick="odeslatrequest('/agent.php','teloverit=');overlay();">Nové inzeráty e-mailem</button>
+	<div id="overlay">
+     <div></div>
+</div>
+
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226053640/citroen-grand-c4-picasso-20hdi-man-110-kw-7mist-kamery-360.php"><img src="https://www.bazos.cz/img/1t/640/226053640.jpg?t=1794674348" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MAN 110 kW 7MÍST KAMERY 360" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226053640/citroen-grand-c4-picasso-20hdi-man-110-kw-7mist-kamery-360.php">Citroën Grand C4 Picasso 2.0HDi MAN 110 kW 7MÍST KAMERY 360</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 26.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi SHINE - 7 MÍST - 110KW - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - PŘEDNÍ / ZADNÍ SENZORY - PŘEDNÍ / ZADNÍ KAMERA + 360 - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOVÁNÍ - HLÍDÁNÍ MRTVÉHO UHLU - ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  248 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">894 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226053640');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226053640');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226053640');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226344420/citroen-c4-picasso-16i-88kw-manual-led-senzory.php"><img src="https://www.bazos.cz/img/1t/420/226344420.jpg?t=1794518683" class="obrazek" alt="Citroën C4 Picasso 1.6i 88KW MANUÁL LED SENZORY" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226344420/citroen-c4-picasso-16i-88kw-manual-led-senzory.php">Citroën C4 Picasso 1.6i 88KW MANUÁL LED SENZORY</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 24.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 PICASSO 1.6I BENZIN - 88 KW - MANUÁLNÍ PŘEVODOVKA - NAVIGACE - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - ZADNÍ SENZORY - USB - AUX - 2x KLÍČ - ZANOVNÍ ZIMNÍ PNEUMATIKY - MOŽNOST SE DOMLUVIT NA DALŠÍ SADU KOL, MOŽNOST FINANCOVÁNÍ NA SPLÁTKY. 
+
+M ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  109 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">785 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226344420');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226344420');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226344420');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226053667/citroen-grand-c4-picasso-20hdi-man-7mist-kamera-tazne.php"><img src="https://www.bazos.cz/img/1t/667/226053667.jpg?t=1794489921" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MAN 7MÍST KAMERA TAŽNÉ" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226053667/citroen-grand-c4-picasso-20hdi-man-7mist-kamera-tazne.php">Citroën Grand C4 Picasso 2.0HDi MAN 7MÍST KAMERA TAŽNÉ</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 24.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi SHINE - 7MÍST - 110KW - TAŽNÉ ZAŘÍZENÍ - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - AUTOMATICKÉ DÁLKOVÉ SVĚTLA - PŘEDNÍ/ZADNÍ SENZORY - ZADNÍ KAMERA - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOV ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  259 900 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">843 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226053667');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226053667');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226053667');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226167760/citroen-c4-grand-picasso-20hdi-110kw-manual-110kw-tazne-zar.php"><img src="https://www.bazos.cz/img/1t/760/226167760.jpg?t=1794154109" class="obrazek" alt="CITROEN C4 GRAND PICASSO 2.0HDI 110KW-MANUÁL-110KW TAŽNÉ-ZAŘ" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226167760/citroen-c4-grand-picasso-20hdi-110kw-manual-110kw-tazne-zar.php">CITROEN C4 GRAND PICASSO 2.0HDI 110KW-MANUÁL-110KW TAŽNÉ-ZAŘ</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 20.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0 110KW 7 MÍST MANUÁLNÍ PŘEVODOVKA AUTOMATICKÉ PARKOVÁNÍ LED UDĚLANÉ ROZVODY+PRAVIDELNÁ SERVISNÍ HISTORIE - FACELIFT MODEL - TAŽNÉ ZAŘÍZENÍ
+
+VELMÍ PĚKNÝ STAV CELÉHO VOZU - ČISTÝ NEZNIČENÝ INTERIÉR PO NEKUŘÁKOVI - FACELIFT ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  239 900 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>620 00</div>
+<div class="inzeratyview">945 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226167760');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226167760');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19686093','19001075','Libor');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226167760');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226308727/prodam-c4-picasso-16-hdi.php"><img src="https://www.bazos.cz/img/1t/727/226308727.jpg?t=1794415819" class="obrazek" alt="Prodám C4 Picasso 1,6 HDi" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226308727/prodam-c4-picasso-16-hdi.php">Prodám C4 Picasso 1,6 HDi</a></h2><span class=velikost10> - <span title="TOP 10x Platí do 12.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Nabízím k prodeji Citroen C4 Picasso 1,6 HDi, rok 2008, najeto 286.665 km, platnost stk 09/2027, tažné, převodovka manuál, nový katalyzátor, nový filtr pevných částic. Prostorný vůz. Pevná cena 30.000 Kč.</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  30 000 Kč</span></b></div>
+<div class="inzeratylok">Jičín<br>507 91</div>
+<div class="inzeratyview">901 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226308727');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226308727');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19203295','21721022','Petr');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226308727');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225725275/citroen-grand-c4-picasso-20hd-manual-7mist-led-tazne-kamera.php"><img src="https://www.bazos.cz/img/1t/275/225725275.jpg?t=1793461461" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HD MANUÁL 7MÍST LED TAŽNÉ KAMERA" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225725275/citroen-grand-c4-picasso-20hd-manual-7mist-led-tazne-kamera.php">Citroën Grand C4 Picasso 2.0HD MANUÁL 7MÍST LED TAŽNÉ KAMERA</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 12.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi SHINE - 7MÍST - 110KW - TAŽNÉ ZAŘÍZENÍ - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - AUTOMATICKÉ DÁLKOVÉ SVĚTLA - PŘEDNÍ/ZADNÍ SENZORY - ZADNÍ KAMERA - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOV ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  259 900 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">1775 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225725275');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225725275');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225725275');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225569728/citroen-grand-c4-picasso-20hdi-manual-kamera-tazne.php"><img src="https://www.bazos.cz/img/1t/728/225569728.jpg?t=1793110683" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MANUÁL KAMERA TAŽNÉ" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225569728/citroen-grand-c4-picasso-20hdi-manual-kamera-tazne.php">Citroën Grand C4 Picasso 2.0HDi MANUÁL KAMERA TAŽNÉ</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 8.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi - 110KW - TAŽNÉ ZAŘÍZENÍ - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - PŘEDNÍ/ZADNÍ SENZORY - ZADNÍ KAMERA - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOVÁNÍ - HLÍDÁNÍ MRTVÉHO UHLU - TEMPOMAT - ASI ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  195 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">1961 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225569728');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225569728');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225569728');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225634505/skoda-fabia-i-combi-19-sdi-klimatizace-spickovy-stav.php"><img src="https://www.bazos.cz/img/1t/505/225634505.jpg?t=1793952211" class="obrazek" alt="CITROEN C4 PICASSO 1.6 16v EXCLUSIVE 2012 MAX VÝBAVA , LED" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225634505/skoda-fabia-i-combi-19-sdi-klimatizace-spickovy-stav.php">CITROEN C4 PICASSO 1.6 16v EXCLUSIVE 2012 MAX VÝBAVA , LED</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 8.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>NABÍZÍME K PRODEJI VELMI PĚKNÉ VOZIDLO CITROEN PICASSO 1,6,16v 88 kW / 119 PS PROSTORNÝ, RODINNÝ VŮZ. ČTYŘVÁLCOVÝ BENZINOVÝ MOTOR. AUTO S JASNÝM PŮVODEM A NÁJEZDEM. SERVISOVÁNO. GARÁŽOVÁNO. MAXIMÁLNÍ VÝBAVA VČETNĚ AUTOMATICKÉ DVOUZÓNOVÉ KLIMATIZACE,  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  95 999 Kč</span></b></div>
+<div class="inzeratylok">Zlín<br>765 02</div>
+<div class="inzeratyview">1995 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225634505');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225634505');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','21319375','DAL%C5%A0%C3%8D+NAB%C3%8DDKA+LEVN%C3%9DCH+VOZ%C5%AE+ZDE');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225634505');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/224738168/citroen-c-4-16-hdi-88-kw-rv-2015-najeto-100-tis-webasto.php"><img src="https://www.bazos.cz/img/1t/168/224738168.jpg?t=1793439813" class="obrazek" alt="CITROEN C 4 1,6 HDI 88 kW RV 2015 NAJETO 105 TIS  WEBASTO" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/224738168/citroen-c-4-16-hdi-88-kw-rv-2015-najeto-100-tis-webasto.php">CITROEN C 4 1,6 HDI 88 kW RV 2015 NAJETO 105 TIS  WEBASTO</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 7.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>PRODÁM VELMI DOBŘE VYBAVENÝ CITROEN C 4 RV 2015 AKTUALNĚ NAJETO 105 TIS.VÝBAVA: LED SVĚTLA HLÍDÁNÍ MRTVÉHO ÚHLU TEMPOMAT VYHŘÍVANÉ SEDAČKY EL.SKLOPNÁ ZRCÁTKA KEY LTSG PARKOVACÍ SENZORY PŘEDNÍ I ZADNÍ NEZÁVISLÉ TOPENÍ S ČASOVAČEM WEBASTO,NAVIGACE, DEŠ ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  119 000 Kč</span></b></div>
+<div class="inzeratylok">Praha - východ<br>250 01</div>
+<div class="inzeratyview">2079 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','224738168');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','224738168');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19052259','C+4');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','224738168');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226032097/citroen-jumper-maxi-l4h3-heavy-rv-2020-top.php"><img src="https://www.bazos.cz/img/1t/097/226032097.jpg?t=1794234149" class="obrazek" alt="CITROEN JUMPER MAXI L4H3 HEAVY RV 2020 TOP" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226032097/citroen-jumper-maxi-l4h3-heavy-rv-2020-top.php">CITROEN JUMPER MAXI L4H3 HEAVY RV 2020 TOP</a></h2><span class=velikost10> - <span title="TOP 10x Platí do 6.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CENA JE PEVNÁ ....
+
+
+ZÁVADA MOTORU, MOTOR TOČÍ KRÁSNĚ, NENÍ POTKANÝ ANI ZADŘENÝ !!! ZÁVADA ZATÍM NEZJIŠTĚNA.
+
+CITROEN JUMPER MAXI L4H3 HEAVY !!! RV 2020
+2.2 HDI 121 KW 163 KONÍ
+DOVOZ A DOKLADY NĚMECKO NA PŘIHLÁŠENÍ..
+
+RV 11/2020
+NAJETO 2700 ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  145 000 Kč</span></b></div>
+<div class="inzeratylok">Beroun<br>266 01</div>
+<div class="inzeratyview">1058 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226032097');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226032097');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19040141','19015967','Martin+%C4%8CERN%C3%9D');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226032097');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225312003/citroen-grand-c4-picasso-20hdi-man-110-kw-kamera-tazne.php"><img src="https://www.bazos.cz/img/1t/003/225312003.jpg?t=1792876433" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MAN 110 kW  KAMERA TAŽNÉ" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225312003/citroen-grand-c4-picasso-20hdi-man-110-kw-kamera-tazne.php">Citroën Grand C4 Picasso 2.0HDi MAN 110 kW  KAMERA TAŽNÉ</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 5.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi - 110KW - TAŽNÉ ZAŘÍZENÍ - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - PŘEDNÍ/ZADNÍ SENZORY - ZADNÍ KAMERA - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOVÁNÍ - HLÍDÁNÍ MRTVÉHO UHLU - TEMPOMAT - ASI ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  195 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">2325 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225312003');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225312003');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225312003');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225868688/citroen-spacetourer-20hdi-130-eat8-max-vybava-long.php"><img src="https://www.bazos.cz/img/1t/688/225868688.jpg?t=1793949159" class="obrazek" alt="Citroen Spacetourer 2.0HDI | 130 | EAT8 | MAX VÝBAVA | LONG" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225868688/citroen-spacetourer-20hdi-130-eat8-max-vybava-long.php">Citroen Spacetourer 2.0HDI | 130 | EAT8 | MAX VÝBAVA | LONG</a></h2><span class=velikost10> - <span title="TOP 8x Platí do 5.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Citroen Spacetourer 2.0BlueHDI r.v.8/2018 najeto: 177.016km Vůz po jednom majiteli, v perfektním a velmi zachovalém stavu. Nikdy nehavarovaný a pravidelně servisovaný převážně v autorizovaném servise. Již po výměně rozvodů při 123.639km 3/2024. K voz ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  528 000 Kč</span></b></div>
+<div class="inzeratylok">Znojmo<br>671 78</div>
+<div class="inzeratyview">795 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225868688');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225868688');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19122389','19073165','Michal');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225868688');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225463106/citroen-grand-c4-picasso-20hdi-manual-7mist-kamery-360.php"><img src="https://www.bazos.cz/img/1t/106/225463106.jpg?t=1793017947" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MANUÁL 7MÍST KAMERY 360" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225463106/citroen-grand-c4-picasso-20hdi-manual-7mist-kamery-360.php">Citroën Grand C4 Picasso 2.0HDi MANUÁL 7MÍST KAMERY 360</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 4.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi SHINE - 7 MÍST - 110KW - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - XENONY - PŘEDNÍ / ZADNÍ SENZORY - PŘEDNÍ / ZADNÍ KAMERA + 360 - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOVÁNÍ - HLÍDÁNÍ MRTVÉHO UHLU - ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  248 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">2587 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225463106');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225463106');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225463106');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226215159/citroen-spacetourer-20-hdi-110kw-cr.php"><img src="https://www.bazos.cz/img/1t/159/226215159.jpg?t=1794237675" class="obrazek" alt="Citroën SpaceTourer 2,0 HDI 110kW, ČR" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226215159/citroen-spacetourer-20-hdi-110kw-cr.php">Citroën SpaceTourer 2,0 HDI 110kW, ČR</a></h2><span class=velikost10> - <span title="TOP 5x Platí do 4.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Dobrý den, prodám svůj Citroën SpaceTourer 
+Najeto: 150 000km
+Vyrobeno: 05/2019
+VIN: VF7VEAHXKJZ083708
+Počet airbagů: 6
+Počet dveří: 5
+Počet míst k sezení: 9
+Země původu: CZ
+Palivo: Nafta
+Objem: 1 997 ccm
+Výkon: 110 kW (150 koní)
+Převodovk ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  460 000 Kč</span></b></div>
+<div class="inzeratylok">Plzeň-jih<br>335 61</div>
+<div class="inzeratyview">582 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226215159');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226215159');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19328635','19468607','Libor');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226215159');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226503132/citroen-c4-grand-spacetourer-business-aut-1majitel.php"><img src="https://www.bazos.cz/img/1t/132/226503132.jpg?t=1794831123" class="obrazek" alt="Citroën C4 GRAND SpaceTourer Business Aut 1.MAJITEL" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226503132/citroen-c4-grand-spacetourer-business-aut-1majitel.php">Citroën C4 GRAND SpaceTourer Business Aut 1.MAJITEL</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 4.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Model 2020,Registrace 23.10.2019,najeto originál 78.400KM ,96KW, Benzin,Šedá metalíza ACIER, 
+- 8 STUPŇOVÁ AUTOMATICKÁ PŘEVODOVKA EAT 8,
+-VÝBAVA BUSSINES ,
+-NAVIGACE,TEMPOMAT,
+-KAMERA
+-DLOUHÁ VERZE GRAND ,
+-7 MÍSTNÁ VERZE 
+-DOTYKOVÝ 7" DISPLEJ ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  447 700 Kč</span></b></div>
+<div class="inzeratylok">Olomouc<br>779 00</div>
+<div class="inzeratyview">54 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226503132');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226503132');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19025574','19006955','Martin+Klein');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226503132');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226484684/citroen-ds7-crossback-4x4.php"><img src="https://www.bazos.cz/img/1t/684/226484684.jpg?t=1794773374" class="obrazek" alt="Citroën DS7 Crossback 4x4" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226484684/citroen-ds7-crossback-4x4.php">Citroën DS7 Crossback 4x4</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 3.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>E-Tense 4x4
+OPERA
+rv 06/21
+89 xxx km
+1.6(b) Hybrid 215kw
+Automat
+Kůže 
+Xenony
+Střešní okno
+Černý stop
+Maximalni mozna vybava
+2x klíč
+Nikdy nehavarováno
+V perfektním technickém stavu</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  499 000 Kč</span></b></div>
+<div class="inzeratylok">Praha - západ<br>252 25</div>
+<div class="inzeratyview">142 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226484684');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226484684');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19108509','19078604','Pavel');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226484684');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226466063/citroen-xsara-picasso-20-hdi.php"><img src="https://www.bazos.cz/img/1t/063/226466063.jpg?t=1794746760" class="obrazek" alt="Citroën Xsara Picasso 2.0 HDi" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/226466063/citroen-xsara-picasso-20-hdi.php">Citroën Xsara Picasso 2.0 HDi</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 3.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>​Citroën Xsara Picasso 2.0 HDi (66 kW) – Nesmrtelný pracant s STK do 06/2028
+​Hledáte auto na stavbu, na ryby nebo pro začátečníka, u kterého nebudete brečet nad každým novým škrábancem? Právě jste ho našli!
+​Prodám Citroën Xsara Picasso 2.0 HDi (66  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  16 900 Kč</span></b></div>
+<div class="inzeratylok">Brno venkov<br>664 48</div>
+<div class="inzeratyview">195 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226466063');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226466063');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19173975','19188194','Lud%C4%9Bk');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226466063');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/224809412/citroen-jumper-l2h2-22-bluehdi-121-kw-registrace-2022.php"><img src="https://www.bazos.cz/img/1t/412/224809412.jpg?t=1793614960" class="obrazek" alt="Citroën Jumper L2H2 – 2.2 BlueHDi, 121 kW, registrace 2022" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/224809412/citroen-jumper-l2h2-22-bluehdi-121-kw-registrace-2022.php">Citroën Jumper L2H2 – 2.2 BlueHDi, 121 kW, registrace 2022</a></h2><span class=velikost10> - <span title="TOP 10x Platí do 3.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Nabízíme k prodeji firemní dodávku Citroën Jumper v provedení L2H2. Praktický vůz pro řemeslníky, servisní a montážní práce nebo rozvoz, vybavený tažným zařízením.
+
+První registrace: 20. 4. 2022
+
+Motor: 2.2 BlueHDi, diesel, 121 kW / 165 koní
+
+S ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  250 000 Kč</span></b></div>
+<div class="inzeratylok">Pelhřimov<br>395 01</div>
+<div class="inzeratyview">1585 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','224809412');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','224809412');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19692107','19767491','Jaroslav');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','224809412');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225854464/citroen-c-3-14-hdi-slusny-stav.php"><img src="https://www.bazos.cz/img/1t/464/225854464.jpg?t=1793535969" class="obrazek" alt="citroen c3 1.4 HDI  ( slusny stav )" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225854464/citroen-c-3-14-hdi-slusny-stav.php">citroen c3 1.4 HDI  ( slusny stav )</a></h2><span class=velikost10> - <span title="TOP 10x Platí do 2.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>zdravim.
+prodavam svemu kamaradovi 
+citroen c 3 1.4 HDI r.v. 2008
+najeto cca 184000 km
+nove rozvody delany pri kilometrech 140000km
+nove oleje
+nove filtri
+nove kotouce + desticky
+
+vse funguje jak ma
+novy olej do prevodove skrine
+spotreba c ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  35 000 Kč</span></b></div>
+<div class="inzeratylok">České Budějovice<br>370 01</div>
+<div class="inzeratyview">1718 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225854464');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225854464');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19019421','19052583','xxxx');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225854464');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225254833/citroen-c5-aitcross-suv-133kw-pano-kuze-360-kam.php"><img src="https://www.bazos.cz/img/1t/833/225254833.jpg?t=1794053270" class="obrazek" alt="Citroen C5 Aircross SUV 133kw, pano, kůže, 360 kam" width="170" height="128"></a>
+<h2 class=nadpis><a href="/inzerat/225254833/citroen-c5-aitcross-suv-133kw-pano-kuze-360-kam.php">Citroen C5 Aircross SUV 133kw, pano, kůže, 360 kam</a></h2><span class=velikost10> - <span title="TOP 5x Platí do 2.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>V pověření souseda prodám velké SUV Citroen C5 Aircross 1,6 Turbo 133kw
+
+rok 2019
+najeto cca 32000km
+2x klíč, servisované, nehavarované, ale lakované na pravé části, kdy se paní nevešla do vrat. Oprava byla provedena v Citroen Kladno. Foto opravené š ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  395 000 Kč</span></b></div>
+<div class="inzeratylok">Česká Lípa<br>471 24</div>
+<div class="inzeratyview">1359 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225254833');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225254833');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19074501','19340441','JH');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225254833');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+<div id="container_one" class="container"></div>
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225680244/citroen-c-crosser-4x4-24-benzin-plyn-top-stav.php"><img src="https://www.bazos.cz/img/1t/244/225680244.jpg?t=1794312695" class="obrazek" alt="citroen c-crosser 4x4  2.4 BENZIN + PLYN ( TOP STAV )" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225680244/citroen-c-crosser-4x4-24-benzin-plyn-top-stav.php">citroen c-crosser 4x4  2.4 BENZIN + PLYN ( TOP STAV )</a></h2><span class=velikost10> - <span title="TOP 10x Platí do 2.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>dobry den
+prodam citroen c-cross 
+Najeto 245...
+r.v. 2010
+motor 2.4 Benzin 130 kw + plyn 
+
+nova stk do 30.6.2028 + hotova revize na plyn
+Nová baterie 76 am.
+plyn byl namontovan v roce 2018 Profesionalni firmou a je samozrejme zapsan v technic ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  99 999 Kč</span></b></div>
+<div class="inzeratylok">České Budějovice<br>370 01</div>
+<div class="inzeratyview">2135 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225680244');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225680244');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19019421','19052583','xxxx');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225680244');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226186183/citroen-c5-aircross-plugin-hybrid-165kw-business.php"><img src="https://www.bazos.cz/img/1t/183/226186183.jpg?t=1794291579" class="obrazek" alt="Citroën C5 Aircross, PlugIn Hybrid 165kW Business" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226186183/citroen-c5-aircross-plugin-hybrid-165kw-business.php">Citroën C5 Aircross, PlugIn Hybrid 165kW Business</a></h2><span class=velikost10> - <span title="TOP 4x Platí do 2.12. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>8.12.2021, 95.100KM , stříbrná metalíza / interiér černá Vpředu napříč uložený zážehový čtyřválec pohání přední kola. Zdvihový objem 1598 cm3, výkon 165 kW při 6000 1/min, točivý moment 300 Nm při 3000 1/min. Vpředu uložený elektromotor, výkon 80 kW, ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  598 950 Kč</span></b></div>
+<div class="inzeratylok">Olomouc<br>779 00</div>
+<div class="inzeratyview">505 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226186183');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226186183');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19025574','19006955','Martin+Klein');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226186183');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225293086/skoda-karoq-20tdi-110kw-1-majitel-cr-led-4xvyhrevoknovola.php"><img src="https://www.bazos.cz/img/1t/086/225293086.jpg?t=1793617502" class="obrazek" alt="CITROEN C4 GRAND PICASSO 1.6i MANUÁL LED KEYLESS TAŽNÉ ZAŘ-" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225293086/skoda-karoq-20tdi-110kw-1-majitel-cr-led-4xvyhrevoknovola.php">CITROEN C4 GRAND PICASSO 1.6i MANUÁL LED KEYLESS TAŽNÉ ZAŘ-</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 30.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 1.6i 115KW EXCLUSIVE 7 MÍST - MANUÁLNÍ PŘEVODOVKA - TAŽNÉ ZAŘ. - KEYLESS GO VSTUP+START - AUTOMATICKÉ PARKOVÁNÍ - NAVIGACE - LED
+
+1 MAJITEL, VELMI PĚKNÝ STAV CELÉHO VOZU, SERVISNÍ KNIHA, 7 SEDADEL MANUÁLNÍ PŘEVODOVKA, TAŽNÉ ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  189 900 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>620 00</div>
+<div class="inzeratyview">2404 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225293086');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225293086');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19075251','19001075','Libor');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225293086');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225598449/prodej-dodavka-citroen-jumper.php"><img src="https://www.bazos.cz/img/1t/449/225598449.jpg?t=1793810636" class="obrazek" alt="Prodej Dodávka Citroen Jumper" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225598449/prodej-dodavka-citroen-jumper.php">Prodej Dodávka Citroen Jumper</a></h2><span class=velikost10> - <span title="TOP 5x Platí do 29.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Dodávka Citroen Jumper, první majitel, tažné, rok výroby 2015, 110kW, najeto 280 000km, zimní i letní pneu</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  145 000 Kč</span></b></div>
+<div class="inzeratylok">Praha 10<br>100 00</div>
+<div class="inzeratyview">1267 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225598449');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225598449');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','20414480','20546254','Petr+Vop%C3%A1lensk%C3%BD');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225598449');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226262356/citroen-c3-picasso-16hdi-2016-cr-stk-2028-2x-kola-lz.php"><img src="https://www.bazos.cz/img/1t/356/226262356.jpg?t=1794821134" class="obrazek" alt="Citroën C3 Picasso 1.6HDi 2016 ČR, STK 2028, 2x kola L/Z" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226262356/citroen-c3-picasso-16hdi-2016-cr-stk-2028-2x-kola-lz.php">Citroën C3 Picasso 1.6HDi 2016 ČR, STK 2028, 2x kola L/Z</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 29.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>PRODÁM pěkný CITROEN C3 PICASSO 1,6 Blue HDi 100 Exclusive. Koupeno nové v ČR, KM NÁJEZD SE ZÁRUKOU, 
+DOLOŽENO, NOVÁ STK, KLIMA, ESP+ASR, CD+MP3, El.OKNA, LED DENNÍ SVÍCENÍ, SPOTŘEBA 5L!! 
+Nehavarováno, CERTIFIKÁT AUTOTRACER - CEBIA. K vozu je v ce ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  109 990 Kč</span></b></div>
+<div class="inzeratylok">Zlín<br>765 02</div>
+<div class="inzeratyview">478 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226262356');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226262356');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19715678','C3+PICASSO+2016');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226262356');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226472643/citroen-jumpy-2011-16-hdi-66kw.php"><img src="https://www.bazos.cz/img/1t/643/226472643.jpg?t=1794805007" class="obrazek" alt="Citroën jumpy 2011 1.6 hdi 66kw" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226472643/citroen-jumpy-2011-16-hdi-66kw.php">Citroën jumpy 2011 1.6 hdi 66kw</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 29.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Na prodej Citroën jumpy z roku 2011 1.6 hdi 66kw. První majitel firma. Jasná servisní historie Najeto 190 000 Nyní měněny oboje ložiska vepředu + snímač ABS, olej a olej v převodovce, čep řízení. Je naplněný eolis. Rozvody dělané ve 165000. Přidávám  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  85 000 Kč</span></b></div>
+<div class="inzeratylok">Olomouc<br>783 21</div>
+<div class="inzeratyview">133 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226472643');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226472643');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19095053','19098731','Lubom%C3%ADr');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226472643');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226271528/obytny-vuz-nejen-na-hlavni-sezonu.php"><img src="https://www.bazos.cz/img/1t/528/226271528.jpg?t=1794380372" class="obrazek" alt="Obytný vůz / NEJEN na hlavní sezónu" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226271528/obytny-vuz-nejen-na-hlavni-sezonu.php">Obytný vůz / NEJEN na hlavní sezónu</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám obytný vůz Happy PLA 440 na podvozku Citroen Jumper 2.0 HDI 133kw. Rok výroby 2018, najeto 48385 km. Stav - jako nový. Cena je 1 049 000,-Kč. Odpočet DPH-NE. Nová STK. Pravidelný servis, olej měněn po 10tis km, 6stupňová manuální převodovka, c ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no"> 1 049 000 Kč</span></b></div>
+<div class="inzeratylok">Litoměřice<br>412 01</div>
+<div class="inzeratyview">560 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226271528');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226271528');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','21434129','21660056','Jitka');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226271528');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225220579/rapid.php"><img src="https://www.bazos.cz/img/1t/579/225220579.jpg?t=1793904282" class="obrazek" alt="Citroen C4 coupé  2.0 benzín  2007  100kW-136koní" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225220579/rapid.php">Citroen C4 coupé  2.0 benzín  2007  100kW-136koní</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>K prodeji nabízím pěkného Citroena C4 ve velice slušné výbavě a hlavně s málo vídaným skvělým motorem. V případe zájmu volejte na: 723236764. Pokud nezvednu, samozřejmě Vám zavolám zpět. Nepište mi, prosím, jestli je auto na prodej, pokud ho vidíte,  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  59 000 Kč</span></b></div>
+<div class="inzeratylok">Hradec Králové<br>504 01</div>
+<div class="inzeratyview">4771 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225220579');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225220579');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19622068','19678118','723236764');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225220579');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225490509/citroen-jumpy-s-16-diesel-022019-131000-km.php"><img src="https://www.bazos.cz/img/1t/509/225490509.jpg?t=1794767627" class="obrazek" alt="Citroen Jumpy L1 1.6 70kW diesel 02/2019 131000km &quot;TOP STAV" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225490509/citroen-jumpy-s-16-diesel-022019-131000-km.php">Citroen Jumpy L1 1.6 70kW diesel 02/2019 131000km &quot;TOP STAV</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám Citroen Jumpy ve výborném stavu. ❤️ Bluetooth handsfree, business paket, vyhřívaná elektricky sklopná zrcátka, FM Radio. Dešťový senzor automatické stírání čelního skla ☔️ Úložný prostor v sedačce. V nákladovém prostoru osazeno dřevěnou podlah ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  229 000 Kč</span></b></div>
+<div class="inzeratylok">Ústí nad Orlicí<br>562 01</div>
+<div class="inzeratyview">574 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225490509');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225490509');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19065967','19066380','Tom');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225490509');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225444585/citroen-bx-14re.php"><img src="https://www.bazos.cz/img/1t/585/225444585.jpg?t=1794769567" class="obrazek" alt="Citroen bx 14re" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225444585/citroen-bx-14re.php">Citroen bx 14re</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám pěkný a funkční CITRÖEN BX 14RE BENZIN,55 kw,rok 1989,najeto 189650 km,manuál, hydraulika funkční a jezdí krásně.Stará SPZ TRH xxxx.Momentálně značky v depozitu .Po servisu LHM a chladicí kapaliny,nový katalyzátor.I náhradní díly.Po majiteli k ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  65 000 Kč</span></b></div>
+<div class="inzeratylok">Třebíč<br>674 01</div>
+<div class="inzeratyview">926 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225444585');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225444585');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19256917','Karel');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225444585');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226047834/prodam-citroen-c4-picasso-16-hdi.php"><img src="https://www.bazos.cz/img/1t/834/226047834.jpg?t=1794329663" class="obrazek" alt="Prodám Citröen C4 Picasso 1.6 Hdi" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226047834/prodam-citroen-c4-picasso-16-hdi.php">Prodám Citröen C4 Picasso 1.6 Hdi</a></h2><span class=velikost10> - <span title="TOP 3x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám Citröena Prodám Citroen C4 Picasso s motorem 1.6 HDi 80kW nafta , rok 2009, najeto 172000km.
+
+STK a Emise do 5/2028
+Eko poplatek se neplatí, pouze přepis
+
+Auto je obuto  na nových letních pneumatikách a při rychlém jednání přidám  i nové  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  63 000 Kč</span></b></div>
+<div class="inzeratylok">Frýdek - Místek<br>738 01</div>
+<div class="inzeratyview">635 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226047834');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226047834');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19161646','19174261','Radim+Vel%C4%8Dovsk%C3%BD');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226047834');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226068924/citroen-v-cz-1majitel-dalnicni-kmbezvadny-stav.php"><img src="https://www.bazos.cz/img/1t/924/226068924.jpg?t=1793965459" class="obrazek" alt="Citroen 2,0 HDI - v CZ 1.MAJITEL, DÁLNIČNÍ KM,BEZVADNÝ STAV" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226068924/citroen-v-cz-1majitel-dalnicni-kmbezvadny-stav.php">Citroen 2,0 HDI - v CZ 1.MAJITEL, DÁLNIČNÍ KM,BEZVADNÝ STAV</a></h2><span class=velikost10> - <span title="TOP 4x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>C5 2,0 HDI, 8/2015, 193 TKM,1997 CCM, MAN 6 ST. PŘEVODOVKA, 110 KW, PARKOVACÍ KAMERA,PRAVIDELNÝ SERVIS, NEBOURANÉ, VIN VF7RWAHRMFL509280, PŘI RYCHLÉM JEDNÁNÍ SLEVA</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  120 000 Kč</span></b></div>
+<div class="inzeratylok">Plzeň-jih<br>335 01</div>
+<div class="inzeratyview">1029 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226068924');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226068924');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','21125899','21322749','BLANKA+L%C3%81LOV%C3%81');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226068924');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226054161/citroen-berlingo-16-diesel-rv2011.php"><img src="https://www.bazos.cz/img/1t/161/226054161.jpg?t=1794499424" class="obrazek" alt="Citroen Berlingo 1.6 Hdi. r.v2011 Multispace" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226054161/citroen-berlingo-16-diesel-rv2011.php">Citroen Berlingo 1.6 Hdi. r.v2011 Multispace</a></h2><span class=velikost10> - <span title="TOP 4x Platí do 27.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Hezké auto   Konečně pořádný kočár. 
+Jeden majitel ,klimatizace, tempomat, vestavěné rádio 
+Rádio 
+Centrální zamykání 
+Nová Stk 
+Servisní kniha 186000 km
+2x sada kol</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  79 990 Kč</span></b></div>
+<div class="inzeratylok">Strakonice<br>387 43</div>
+<div class="inzeratyview">1407 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226054161');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226054161');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19180964','D');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226054161');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226426226/citroen-c4-cactus.php"><img src="https://www.bazos.cz/img/1t/226/226426226.jpg?t=1794664648" class="obrazek" alt="Citroen C4 Cactus" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226426226/citroen-c4-cactus.php">Citroen C4 Cactus</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 27.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám udržovaný Citroen C4 Cactus. Najeto ma 160000 km datum první registrace 01.08.2016 Úsporne auto dokáže jezdit do 5 litru nafty. Citroen je vybaveny- vyhřívané sedačky, tempomat, asistent rozjezdu do kopce, klimatizaci, vyhřívané elektrické zrc ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  120 000 Kč</span></b></div>
+<div class="inzeratylok">Frýdek - Místek<br>738 01</div>
+<div class="inzeratyview">260 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226426226');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226426226');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19281615','19308712','J.H.');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226426226');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226425900/citroen-xsara-vts.php"><img src="https://www.bazos.cz/img/1t/900/226425900.jpg?t=1794664018" class="obrazek" alt="Citroen Xsara VTS" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226425900/citroen-xsara-vts.php">Citroen Xsara VTS</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 27.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám Citroen Xsara VTS 1.8i 16V 81kw. R.V 1998. Najeto 176xxx. Jedná se o pěkný zachovalý kousek. Není zrezlá. Byla garážovaná. Ve 110xxx dělané rozvody. Brzdy 80%.
+Vady:
+Drobná kosmetika (pošlu zájemcům)
+Trhlá sedačka řidiče. 
+Jinak auto je ve sta ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">Dohodou</span></b></div>
+<div class="inzeratylok">Kolín<br>281 44</div>
+<div class="inzeratyview">966 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226425900');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226425900');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19068146','19073343','David');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226425900');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225043543/citroen-grand-c4-picasso-20hdi-man-7mist-tazne-serviska.php"><img src="https://www.bazos.cz/img/1t/543/225043543.jpg?t=1792589571" class="obrazek" alt="Citroën Grand C4 Picasso 2.0HDi MAN 7MÍST TAŽNÉ SERVISKA" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225043543/citroen-grand-c4-picasso-20hdi-man-7mist-tazne-serviska.php">Citroën Grand C4 Picasso 2.0HDi MAN 7MÍST TAŽNÉ SERVISKA</a></h2><span class=velikost10> - <span title="TOP 21x Platí do 26.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>CITROEN C4 GRAND PICASSO 2.0HDi SHINE - 110KW - 7MÍST - TAŽNÉ ZAŘÍZENÍ - MANUÁLNÍ PŘEVODOVKA 6ST. - AUT. SVÍCENÍ - LED DENNÍ SVÍCENÍ - PŘEDNÍ/ZADNÍ SENZORY - ZADNÍ KAMERA - PARKOVACÍ ASISTENT - AUTOMATICKÉ PARKOVÁNÍ - HLÍDÁNÍ MRTVÉHO UHLU - HLÍDÁNÍ P ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  249 000 Kč</span></b></div>
+<div class="inzeratylok">Brno<br>625 00</div>
+<div class="inzeratyview">2981 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225043543');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225043543');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19071192','19051368','Josef+-+Aktu%C3%A1ln%C3%AD+nab%C3%ADdka+aut');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225043543');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226390604/citroen-c5-kombi.php"><img src="https://www.bazos.cz/img/1t/604/226390604.jpg?t=1794586226" class="obrazek" alt="Citroën C5 kombi" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226390604/citroen-c5-kombi.php">Citroën C5 kombi</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 26.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám Citroën C5 kombi černé barvy s manuální převodovkou, střešními ližinami a multifunkčním volantem.303tis.stk 9/28 po výměně olejů filtrů poslední servis za 15tisic motorický bezvadný tichý pravidelný chod podvozek tuhý nic se neozývá výhodou js ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  45 000 Kč</span></b></div>
+<div class="inzeratylok">Praha 9<br>197 00</div>
+<div class="inzeratyview">518 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226390604');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226390604');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19130119','C5');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226390604');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/226388929/citroen-c4-cactus-12-vti-60kw-76tkm2xkolaserviszaruka.php"><img src="https://www.bazos.cz/img/1t/929/226388929.jpg?t=1794583004" class="obrazek" alt="Citroen C4 Cactus 1.2 VTi 60kW, 76TKM,2xKOLA,SERVIS,ZÁRUKA" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/226388929/citroen-c4-cactus-12-vti-60kw-76tkm2xkolaserviszaruka.php">Citroen C4 Cactus 1.2 VTi 60kW, 76TKM,2xKOLA,SERVIS,ZÁRUKA</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 26.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám Citroen C4 Cactus s benzinovým motorem 1.2 o výkonu 60kW s 5st. man. převodovkou.
+1. Registrace - 09/2014
+Najeto: 76 000km
+✅Historie:
+Vozidlo má vedenou servisní knížku - pravidelný servis 
+Poslední servis při 73 570km
+✅Benefity:
+STK/EM ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  144 555 Kč</span></b></div>
+<div class="inzeratylok">Žďár nad Sázavou<br>591 01</div>
+<div class="inzeratyview">269 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226388929');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226388929');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19002507','19031248','AUTOFIVE');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226388929');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225803583/jumper.php"><img src="https://www.bazos.cz/img/1t/583/225803583.jpg?t=1794634640" class="obrazek" alt="Jumper" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225803583/jumper.php">Jumper</a></h2><span class=velikost10> - <span title="TOP 5x Platí do 25.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Nabízím k prodeji Citroen Jumper, skříňovoi dodávku. Rok 2016, 2,2 Hdi 96 kw rozvod motoru řetězem. Najeto 257500....Koupi jsem ji v bazaru, dovoz Rakousko, servis za 90 tisíc po koupi. Ve předu tlumiče a zadní náprava na měchach. Rozměry sktrine 4 m ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  215 000 Kč</span></b></div>
+<div class="inzeratylok">Příbram<br>261 01</div>
+<div class="inzeratyview">901 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225803583');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225803583');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19595562','19660739','Martin');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225803583');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="/inzerat/225744685/citroen-grand-c4-spacetourer-12-pt-navi-kamera-7-mist.php"><img src="https://www.bazos.cz/img/1t/685/225744685.jpg?t=1794387237" class="obrazek" alt="Citroen Grand C4 SpaceTourer 1,2 PT r.v.2019 KAMERA, 7-MÍST" width="170" height="128" loading="lazy"></a>
+<h2 class=nadpis><a href="/inzerat/225744685/citroen-grand-c4-spacetourer-12-pt-navi-kamera-7-mist.php">Citroen Grand C4 SpaceTourer 1,2 PT r.v.2019 KAMERA, 7-MÍST</a></h2><span class=velikost10> - <span title="TOP 2x Platí do 24.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Nabízím k prodeji 7.místný vůz s benzinovým motorem a 6st. manuální převodovkou ve velmi dobrém stavu s novou STK.        Rv. 10/2019, výkon 96kW, najeto 105.043 km.
+Výbava:ABS, ASR, ESP, Asist. rozjezdu, Tažné zařízení, Parkovací asist., Kamera, Te ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  219 000 Kč</span></b></div>
+<div class="inzeratylok">Hodonín<br>696 81</div>
+<div class="inzeratyview">492 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225744685');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225744685');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19189838','19206206','Petr+Ham%C5%A1%C3%ADk');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225744685');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+<div id="container_two" class="container"></div>
+<script type="text/javascript" charset="utf-8">
+var pageOptions = {
+  'pubId': 'pub-3645948300403337',
+  'query' : "Citroën",
+  "channel": "9153444560",  'linkTarget' : '_blank',
+  'personalizedAds' : false,
+  'adsafe': 'medium',
+  'ivt': false,
+'styleId' : '6171314811',  'hl': 'cs'
+};
+
+var adblock1 = {
+  'container': 'container_one',
+  'width': 'auto',
+  'maxTop' : 2
+};
+
+var adblock2 = {
+  'container': 'container_two',
+  'width': 'auto',
+  'number' : 2
+};
+
+_googCsa('ads', pageOptions, adblock1, adblock2);</script>
+
+<br><div class="strankovani">Stránka: <b><span class=cisla>1</span></b> <a href="/citroen/40/">2</a> <a href="/citroen/80/">3</a> <a href="/citroen/120/">4</a> <a href="/citroen/160/">5</a> <a href="/citroen/200/">6</a> <a href="/citroen/240/">7</a> <a href="/citroen/280/">8</a> <a href="/citroen/40/"><b>Další</b></a></div><br><br><br>
+
+
+</div></div><br>
+
+&copy;2026 Bazoš -  <b>Inzerce, Bazar Citroën</b><br>
+<a href="https://www.bazos.cz/napoveda.php">Nápověda</a>, <a href="https://www.bazos.cz/dotazy.php">Dotazy</a>, <a href="https://www.bazos.cz/hodnoceni.php">Hodnocení</a>, <a href="https://www.bazos.cz/kontakt.php">Kontakt</a>, <a href="https://www.bazos.cz/reklama.php">Reklama</a>, <a href="https://www.bazos.cz/podminky.php">Podmínky</a>, <a href="https://www.bazos.cz/ochrana-udaju.php">Ochrana údajů</a>, <a href="https://www.bazos.cz/rss.php?rub=au&cat=82">RSS</a>, <form name="formvkm" id="formvkm" method="post" style="display: inline;"><input type="hidden" name="vkm" value="m"><input type="submit" class="vkm" value="Mobilní verze"></form><br>
+
+Inzeráty Auto celkem: <b>435815</b>, za 24 hodin: <b>25897</b><br><br>
+<a href="https://www.bazos.cz/mapa-kategorie.php">Mapa kategorií</a>, <a href="https://auto.bazos.cz/mapa-search.php">Nejvyhledávanější výrazy</a>
+<br>
+Země: <a href="https://auto.bazos.cz">Česká republika</a>, <a href="https://auto.bazos.sk">Slovensko</a>, <a href="https://auto.bazos.pl">Polsko</a>, <a href="https://auto.bazos.at">Rakousko</a>
+<br>
+<br>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZW1QTHKBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NZW1QTHKBB');
+</script>
+
+</body>
+</html>

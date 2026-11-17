@@ -1,0 +1,86 @@
+{
+  "profiles": [
+    {
+      "id": "dodavka_na_sut",
+      "name": "Dodávka na suť",
+      "purpose": "Levná střední dodávka na vození suti při rekonstrukci domu, na dožití. Prioritou je platná STK min. rok, tažné zařízení, nosnost a jednoduchý diesel bez drahých závad; kosmetika a škrábance nevadí.",
+      "reference_model": "Peugeot Expert",
+      "equivalence_group": "stredni_dodavky",
+      "params": {
+        "price_target_czk": 80000,
+        "price_max_czk": 95000
+      },
+      "exclude_keywords": [
+        "na náhradní díly",
+        "havarované",
+        "nepojízdné",
+        "bez tp",
+        "k.o."
+      ],
+      "positive_keywords": [
+        "stk",
+        "tažné",
+        "výdřeva",
+        "2.0 hdi",
+        "1.9 tdi",
+        "l2h1",
+        "l2h2"
+      ],
+      "warning_keywords": [
+        "nouzový režim",
+        "klepe",
+        "vaří",
+        "adblue",
+        "koroze prahů",
+        "bez přepisu"
+      ],
+      "score_weights": {
+        "price": 30,
+        "stk": 30,
+        "keywords": 25,
+        "presentation": 15
+      }
+    },
+    {
+      "id": "srot_auto",
+      "name": "Šrot auto",
+      "purpose": "Extra levný ojetý automovil větších rozměrů s rozměrným kufrem na občasné vyvážení suti, nákupy a apod.",
+      "reference_model": "VW Sharan",
+      "equivalence_group": "starsi_mpv",
+      "params": {
+        "price_target_czk": 40000,
+        "price_max_czk": 80000
+      },
+      "exclude_keywords": [
+        "na náhradní díly",
+        "havarované",
+        "nepojízdné",
+        "bez tp",
+        "k.o."
+      ],
+      "positive_keywords": [
+        "stk",
+        "tažné",
+        "výdřeva",
+        "2.0 hdi",
+        "1.9 tdi",
+        "l2h1",
+        "l2h2"
+      ],
+      "warning_keywords": [
+        "nouzový režim",
+        "klepe",
+        "vaří",
+        "adblue",
+        "koroze prahů",
+        "bez přepisu"
+      ],
+      "score_weights": {
+        "price": 30,
+        "stk": 30,
+        "keywords": 25,
+        "presentation": 15
+      }
+    }
+  ]
+}

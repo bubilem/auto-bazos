@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoHledač</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>AutoHledač</h1>
+    <label class="inline">Profil
+      <select id="profile"></select>
+    </label>
+    <button id="profiles-open" type="button">Upravit profily</button>
+    <button id="sources-open" type="button">Modely a kategorie</button>
+    <button id="crawl" type="button">Stáhnout nové nabídky</button>
+    <form id="add-form" class="inline">
+      <input id="add-url" type="url" placeholder="URL inzerátu z Bazoše…" required size="34">
+      <button id="add" type="submit">Přidat inzerát</button>
+    </form>
+    <button id="compare" type="button" disabled>Porovnat zaškrtnuté v AI (<span id="compare-count">0</span>)</button>
+    <span id="status" class="muted" role="status"></span>
+  </header>
+
+  <details id="purpose-box" class="purpose"><summary>Účel užití</summary><p id="purpose"></p></details>
+
+  <section class="filters" aria-label="Filtry">
+    <input id="f-text" type="search" placeholder="Hledat v titulku a popisu…">
+    <label class="inline">Cena od <input id="f-pmin" type="number" min="0" step="1000"></label>
+    <label class="inline">do <input id="f-pmax" type="number" min="0" step="1000"></label>
+    <label class="inline">Rok od <input id="f-year" type="number" min="1990" max="2030"></label>
+    <label class="inline">Model <select id="f-model"><option value="">vše</option></select></label>
+    <label class="inline"><input id="f-stk" type="checkbox"> Jen s STK</label>
+    <label class="inline"><input id="f-hidden" type="checkbox" checked> Skrýt zamítnuté</label>
+    <label class="inline"><input id="f-inactive" type="checkbox"> Zobrazit neaktivní</label>
+    <label class="inline">Řazení
+      <select id="f-sort">
+        <option value="score">Základní skóre</option>
+        <option value="price">Cena (od nejnižší)</option>
+        <option value="newest">Nejnovější</option>
+        <option value="discount">Slevy</option>
+        <option value="ai">AI skóre (ze srovnání)</option>
+      </select>
+    </label>
+    <span id="count" class="muted"></span>
+  </section>
+
+  <main id="cards" class="cards"></main>
+
+  <dialog id="detail" aria-label="Detail vozidla"></dialog>
+  <dialog id="profiles-dialog" aria-label="Profily hledání"></dialog>
+  <dialog id="sources-dialog" aria-label="Modely a kategorie"></dialog>
+  <dialog id="prompt-dialog" aria-label="Prompt pro AI"></dialog>
+
+  <script src="app.js"></script>
+  <script src="profiles.js"></script>
+  <script src="sources.js"></script>
+</body>
+</html>

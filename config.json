@@ -1,0 +1,76 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "scraping": {
+    "user_agent": "AddCheck-personal/0.1 (local personal use)",
+    "delay_seconds": [
+      2,
+      5
+    ],
+    "image_delay_seconds": [
+      0.4,
+      1.0
+    ],
+    "request_timeout_seconds": 20,
+    "max_images_per_listing": 12,
+    "collage_images": 6
+  },
+  "portals": {
+    "bazos": {
+      "enabled": true,
+      "base_url": "https://auto.bazos.cz",
+      "categories": [
+        {
+          "slug": "dodavka",
+          "max_pages": 8
+        },
+        {
+          "slug": "peugeot",
+          "max_pages": 3
+        },
+        {
+          "slug": "citroen",
+          "max_pages": 3
+        },
+        {
+          "slug": "fiat",
+          "max_pages": 3
+        },
+        {
+          "slug": "toyota",
+          "max_pages": 3
+        },
+        {
+          "slug": "opel",
+          "max_pages": 3
+        },
+        {
+          "slug": "renault",
+          "max_pages": 3
+        },
+        {
+          "slug": "nissan",
+          "max_pages": 3
+        },
+        {
+          "slug": "volkswagen",
+          "max_pages": 3
+        },
+        {
+          "slug": "ford",
+          "max_pages": 3
+        },
+        {
+          "slug": "mercedes",
+          "max_pages": 3
+        },
+        {
+          "slug": "seat",
+          "max_pages": 3
+        }
+      ]
+    }
+  }
+}

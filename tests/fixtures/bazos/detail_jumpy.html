@@ -1,0 +1,493 @@
+Stránka nenalezena<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>Citroën jumpy 2011 1.6 hdi 66kw - Olomouc | Bazoš.cz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Inzerát č. 226472643: Citroën jumpy 2011 1.6 hdi 66kw, Cena: 85 000 Kč, Lokalita: Olomouc. Popis: Na prodej Citroën jumpy z roku 2011 1.6 hdi 66kw. První."><meta property="og:image" content="https://www.bazos.cz/img/1/643/226472643.jpg?t=1794805007"><meta property="og:title" content="Citroën jumpy 2011 1.6 hdi 66kw - Olomouc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bazos.cz">
+<meta property="og:description" content="Inzerát č. 226472643: Citroën jumpy 2011 1.6 hdi 66kw, Cena: 85 000 Kč, Lokalita: Olomouc. Popis: Na prodej Citroën jumpy z roku 2011 1.6 hdi 66kw. První.">
+<link rel="canonical" href="https://auto.bazos.cz/inzerat/226472643/citroen-jumpy-2011-16-hdi-66kw.php"><meta property="fb:admins" content="1055875657">
+<meta name="ROBOTS" content="max-image-preview:large">
+<link rel="preload" as="image" href="https://www.bazos.cz/img/1/643/226472643.jpg?t=1794805007"><link rel="stylesheet" href="https://www.bazos.cz/bazos70s.css" type="text/css"><link rel="preload" as="image" href="https://www.bazos.cz/obrazky/bazos.svg">
+<link rel="stylesheet" href="https://www.bazos.cz/bazosprint.css" type="text/css" media="print">
+<link rel="icon" href="https://www.bazos.cz/favicon.svg" type="image/svg+xml">
+<link rel="icon" HREF="https://www.bazos.cz/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://www.bazos.cz/apple-touch-icon.png">
+<script async src="https://fundingchoicesmessages.google.com/i/pub-3645948300403337?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<script>
+var xhr = new XMLHttpRequest();
+var naseptavac_value = '';
+function naseptavac(value) {
+  if (value=='')  {
+  	naseptavac_value = '';
+  	document.getElementById('vysledek').innerHTML='';
+  	}
+else {
+	if (naseptavac_value == value) {
+		return false;
+	}
+	naseptavac_value = value;
+	setTimeout(function () {
+		if (naseptavac_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavac_value == value){
+				document.getElementById('vysledek').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggest.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('rubnas=AU&catnas=82&qnas='+encodeURIComponent(naseptavac_value));
+	}, 250);
+}
+}
+
+var naseptavacpsc_value = '';
+function naseptavacpsc(value) {
+  if (value=='')  {
+  	naseptavacpsc_value = '';
+  	document.getElementById('vysledekpsc').innerHTML='<table cellpadding=\"3\" cellspacing=\"0\" class=\"tablenaspsc\"><tr><td class=\"act\" onclick=\"getLocation();\"><b>Inzeráty v okolí</b></td></tr></table>';
+  	}
+else {
+	if (naseptavacpsc_value == value) {
+		return false;
+	}
+	naseptavacpsc_value = value;
+	setTimeout(function () {
+		if (naseptavacpsc_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavacpsc_value == value){
+				document.getElementById('vysledekpsc').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggestpsc.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('qnaspsc='+encodeURIComponent(naseptavacpsc_value));
+	}, 250);
+}
+}
+
+function getLocation() {
+if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(showPosition);}
+else {document.getElementById('hlokalita').value = '';}
+}
+function showPosition(position) {
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4){
+				document.getElementById('hlokalita').value = this.responseText;
+				document.forms['formt'].submit();
+			}
+ 		 };
+		xhr.open("POST", '/zip.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('latitude='+encodeURIComponent(position.coords.latitude)+'&longitude='+encodeURIComponent(position.coords.longitude));
+}
+
+function favouriteadd(value,params,obradresa) {
+xhr.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200){
+				document.getElementById('favour').innerHTML = this.responseText;
+				document.getElementById('obrfavour').src = obradresa;
+			}
+  };
+xhr.open("POST", value);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.send(params);
+}
+
+function odeslatrequest(value,params,overvalue) {
+xhr.onreadystatechange = function() {
+  if (this.readyState == 4){
+				document.getElementById(overvalue).innerHTML = this.responseText;
+			}
+  };
+xhr.open("POST", value);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.send(params);
+}
+function odeslatakci(postaction,value1,value2,value3) {
+document.getElementById('postaction').value = postaction;
+document.getElementById("postv1").value = value1;
+document.getElementById("postv2").value = value2;
+document.getElementById("postv3").value = value3;
+document.formaction.submit();
+}
+</script>
+<script src="https://www.bazos.cz/flickity2.js"></script></head>
+
+<body>
+
+
+<div class="sirka">
+<div class="listalogor">
+<div class="listalogol"><a href="https://www.bazos.cz/" title="Bazos.cz - Inzerce, bazar"><img src="https://www.bazos.cz/obrazky/bazos.svg" width="199" height="34" alt="Bazos.cz - Inzerce, inzeráty"></a></div>
+<div class="listalogom"><b>... bazar pro každého</b></div>
+<div class="listalogop"><a href="https://www.bazos.cz/oblibene.php"><b>Oblíbené inzeráty</b></a> <a href="https://www.bazos.cz/moje-inzeraty.php"><b>Moje inzeráty</b></a> <a href="/pridat-inzerat.php"><b><span class=pridati>Přidat inzerát</span></b></a></div>
+</div>
+<form name="formt" id="formt" method=get action=/>
+<div class="listah">
+<div class="rubriky">
+<b>
+Co: <span class=vysokoli><span id="vysledek"></span><input type="search" onkeyup="naseptavac(this.value);" id=hledat name=hledat size="17" maxlength="256" value="" autocomplete="off" title="Co? Vyhledávaný výraz"></span>
+
+<select name="rubriky" onchange='this.form.submit();' title="Vyber rubriku">
+<option value="www">Všechny rubriky</option>
+<option value="auto" selected>Auto</option><option value="deti">Děti</option><option value="dum">Dům a zahrada</option><option value="elektro">Elektro</option><option value="foto">Foto</option><option value="hudba">Hudba</option><option value="knihy">Knihy</option><option value="mobil">Mobily</option><option value="motorky">Motorky</option><option value="nabytek">Nábytek</option><option value="obleceni">Oblečení</option><option value="pc">PC</option><option value="prace">Práce</option><option value="reality">Reality</option><option value="sluzby">Služby</option><option value="sport">Sport</option><option value="stroje">Stroje</option><option value="vstupenky">Vstupenky</option><option value="zvirata">Zvířata</option><option value="ostatni">Ostatní</option></select>
+
+Lokalita: <span class=vysokolipsc><span id="vysledekpsc"></span><input type="search" name="hlokalita" id="hlokalita" onkeyup="naseptavacpsc(this.value);" onclick="naseptavacpsc(this.value);" value="" size="4" maxlength="25" autocomplete="off" title="Kde? PSČ (místo)" style="-webkit-appearance: none;"></span>
+Okolí: <input name="humkreis" title="Okolí v km" value="25" size="3" style="width: 25px;"> km
+Cena od: <input name=cenaod title="Cena od Kč" maxlength="12" size="5" value=""> - do: <input name=cenado title="Cena do Kč" maxlength="12" size="5" value=""> Kč <input type="submit" name="Submit" value="Hledat">
+<input type="hidden" name="order" id="order"><input type="hidden" name="crp" id="crp"><input type="hidden" id="kitx" name="kitx" value="ano"></b>
+</div>
+</div>
+</form>
+<div class="drobky"><a href="https://www.bazos.cz/" title="Inzerce Bazoš">Hlavní stránka</a>  > <a href="https://auto.bazos.cz/">Auto</a> > <a href="https://auto.bazos.cz/citroen/">Citroën</a> > <b>Inzerát č. 226472643</b></div>
+<br>
+
+
+<div class="flexmain"><div class="menuleft"><div class="nadpismenu">Osobní auta</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="/alfa/" >Alfa Romeo</a>
+<a href="/audi/" >Audi</a>
+<a href="/bmw/" >BMW</a>
+<a href="/citroen/"  id=zvyraznenikat>Citroën</a>
+<a href="/dacia/" >Dacia</a>
+<a href="/fiat/" >Fiat</a>
+<a href="/ford/" >Ford</a>
+<a href="/honda/" >Honda</a>
+<a href="/hyundai/" >Hyundai</a>
+<a href="/chevrolet/" >Chevrolet</a>
+<a href="/kia/" >Kia</a>
+<a href="/mazda/" >Mazda</a>
+<a href="/mercedes/" >Mercedes-Benz</a>
+<a href="/mitsubishi/" >Mitsubishi</a>
+<a href="/nissan/" >Nissan</a>
+<a href="/opel/" >Opel</a>
+<a href="/peugeot/" >Peugeot</a>
+<a href="/renault/" >Renault</a>
+<a href="/seat/" >Seat</a>
+<a href="/suzuki/" >Suzuki</a>
+<a href="/skoda/" >Škoda</a>
+<a href="/toyota/" >Toyota</a>
+<a href="/volkswagen/" >Volkswagen</a>
+<a href="/volvo/" >Volvo</a>
+<a href="/ostatni/" >Ostatní značky</a>
+<br>
+<a href="https://elektro.bazos.cz/autoradia/">Autorádia</a>
+<a href="https://pc.bazos.cz/gps/">GPS navigace</a>
+<a href="/havarovana/" >Havarovaná auta</a>
+<a href="/nahradnidily/" >Náhradní díly</a>
+<a href="/pneumatiky/" >Pneumatiky, kola</a>
+<a href="/prislusenstvi/" >Příslušenství</a>
+<a href="/tuning/" >Tuning</a>
+<a href="/veterani/" >Veteráni</a>
+</div></div>
+
+<br>
+<div class="nadpismenu">Užitková vozidla</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="/autobusy/" >Autobusy</a>
+<a href="/dodavka/" >Dodávky</a>
+<a href="/mikrobus/" >Mikrobusy</a>
+<a href="/karavany/" >Karavany, obytná auta</a>
+<a href="/nakladni/" >Nákladní auta</a>
+<a href="/pickup/" >Pick-up</a>
+<a href="/voziky/" >Vozíky, přívěsy</a>
+<a href="https://stroje.bazos.cz/">Stroje</a>
+<a href="/ostatniuzitkova/" >Ostatní</a>
+<br>
+<a href="/havarovanauzitkova/" >Havarovaná</a>
+<a href="/nahradnidilyuzitkova/" >Náhradní díly</a>
+</div>
+</div>
+<br>
+
+<div class="nadpismenu">Moto</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<a href="https://motorky.bazos.cz/">Motorky, Skútry</a>
+</div></div>
+
+<br><div class="mobilskryt" style="text-align: center;">
+<a style="font-size: 13px;text-decoration: none;color:#000000;" href="https://www.jasminka.cz/kniha/jiri-janca-josef-a-zentrich-herbar-lecivych-rostlin-komplet-1-7dil.html" target="_blank" rel=”nofollow”><b>Knihkupectví Jasmínka</b><br>
+<span style="font-size: 13px;text-decoration: none;color:#ff6600;">
+<span style="color:#000000;">Jiří Janča, Josef A. Zentrich:</span> Herbář léčivých rostlin - komplet 1.-7.díl<br><img src="https://www.jasminka.cz/images/v/herbarcv.jpg" width="100" alt="Knihkupectví Jasmínka" title="Knihkupectví Jasmínka" style="border: 1px solid Black;margin: 4px;">
+<br>
+<img src="https://www.bazos.cz/kosik.svg" alt="Jasminka" height="22" style="border: 0px;"> koupit</span></a></div>
+
+</div><div class="maincontent">
+
+
+<div class="listainzerat inzeratyflex">
+<div class="inzeratydetnadpis"><H1 class=nadpisdetail>Citroën jumpy 2011 1.6 hdi 66kw</H1><span class=velikost10> - <span title="TOP 2x Platí do 29.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span></div>
+<div class="inzeratydetdel"><span onclick="odeslatakci('edit','226472643','auto');return false;" class="paction">Smazat/ Upravit/ Topovat</span></div>
+</div><br><div class="fliobal"><div class="carousel"><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/1/643/226472643.jpg?t=1794805007" src="https://www.bazos.cz/img/1/643/226472643.jpg?t=1794805007" width="800" height="600" alt="Citroën jumpy 2011 1.6 hdi 66kw"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/2/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 2"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/3/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 3"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/4/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 4"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/5/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 5"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/6/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 6"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/7/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 7"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/8/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 8"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/9/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 9"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/10/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 10"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/11/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 11"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/12/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 12"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/13/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 13"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/14/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 14"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/15/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 15"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/16/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 16"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/17/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 17"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/18/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 18"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/19/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 19"></div><div class="carousel-cell"><img class="carousel-cell-image" data-flickity-lazyload="https://www.bazos.cz/img/20/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 20"></div></div><div class="flinavigace" id="nahledy1"><img onmouseover="flkty.select(0, false, true );" src="https://www.bazos.cz/img/1t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 1" class="obrazekflithumb"><br><img onmouseover="flkty.select(1, false, true );" src="https://www.bazos.cz/img/2t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 2" class="obrazekflithumb"><br><img onmouseover="flkty.select(2, false, true );" src="https://www.bazos.cz/img/3t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 3" class="obrazekflithumb"><br><img onmouseover="flkty.select(3, false, true );" src="https://www.bazos.cz/img/4t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 4" class="obrazekflithumb"><br><img onmouseover="flkty.select(4, false, true );" src="https://www.bazos.cz/img/5t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 5" class="obrazekflithumb"><br><div style="margin-left:5px;"><img src="https://www.bazos.cz/obrazky/next.svg" alt="Další" height="20" onclick="nahledy()"></div></div><div class="flinavigace" id="nahledy3" style="display: none;"><img onmouseover="flkty.select(10, false, true );" src="https://www.bazos.cz/img/11t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 11" class="obrazekflithumb"><br><img onmouseover="flkty.select(11, false, true );" src="https://www.bazos.cz/img/12t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 12" class="obrazekflithumb"><br><img onmouseover="flkty.select(12, false, true );" src="https://www.bazos.cz/img/13t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 13" class="obrazekflithumb"><br><img onmouseover="flkty.select(13, false, true );" src="https://www.bazos.cz/img/14t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 14" class="obrazekflithumb"><br><img onmouseover="flkty.select(14, false, true );" src="https://www.bazos.cz/img/15t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 15" class="obrazekflithumb"><br><div style="margin-left:5px;"><img src="https://www.bazos.cz/obrazky/next.svg" alt="Další" height="20" onclick="nahledy()"></div></div><div class="flinavigace" id="nahledy2"><img onmouseover="flkty.select(5, false, true );" src="https://www.bazos.cz/img/6t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 6" class="obrazekflithumb"><br><img onmouseover="flkty.select(6, false, true );" src="https://www.bazos.cz/img/7t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 7" class="obrazekflithumb"><br><img onmouseover="flkty.select(7, false, true );" src="https://www.bazos.cz/img/8t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 8" class="obrazekflithumb"><br><img onmouseover="flkty.select(8, false, true );" src="https://www.bazos.cz/img/9t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 9" class="obrazekflithumb"><br><img onmouseover="flkty.select(9, false, true );" src="https://www.bazos.cz/img/10t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 10" class="obrazekflithumb"><br></div><div class="flinavigace" id="nahledy4" style="display: none;"><img onmouseover="flkty.select(15, false, true );" src="https://www.bazos.cz/img/16t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 16" class="obrazekflithumb"><br><img onmouseover="flkty.select(16, false, true );" src="https://www.bazos.cz/img/17t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 17" class="obrazekflithumb"><br><img onmouseover="flkty.select(17, false, true );" src="https://www.bazos.cz/img/18t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 18" class="obrazekflithumb"><br><img onmouseover="flkty.select(18, false, true );" src="https://www.bazos.cz/img/19t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 19" class="obrazekflithumb"><br><img onmouseover="flkty.select(19, false, true );" src="https://www.bazos.cz/img/20t/643/226472643.jpg?t=1794805007" alt="Citroën jumpy 2011 1.6 hdi 66kw - 20" class="obrazekflithumb"><br></div></div><script>var flkty = new Flickity( '.carousel', {fullscreen: true,lazyLoad: 1,wrapAround: true,adaptiveHeight: true});</script>
+<div class=popisdetail>Na prodej Citroën jumpy z roku 2011 1.6 hdi 66kw. První majitel firma. Jasná servisní historie Najeto 190 000 Nyní měněny oboje ložiska vepředu + snímač ABS, olej a olej v převodovce, čep řízení. Je naplněný eolis. Rozvody dělané ve 165000. Přidávám foto servisních údajú s cebie. V případě zájmu se dá o ceně mluvit. Na sms nereaguji</div><br>
+<table width="100%" cellpadding="5" cellspacing="0">
+<tr><td width="35%" valign=top class=listadvlevo>
+<table width="*" cellpadding="0" cellspacing="1">
+<tr><td height="22px" width="25%">Jméno:<br><br></td><td colspan=2><b><span onclick="odeslatakci('rating','19095053','19098731','Lubom%C3%ADr');return false;" class="paction">Jméno prodejce</span></b><br><br></td></tr>
+<tr id="overlaytel"><td height="22px" width="25%">Telefon:<br><br></td><td colspan=2><span class=teldetail onclick="odeslatrequest('/ad-phone.php','idi=226472643&idphone=19098731','overlaytel');"><span style="white-space: nowrap;">000... zobraz číslo</span></span><br><br></td></tr>
+<tr><td height="22px" width="25%">Lokalita:</td><td width="9%"><img src="https://www.bazos.cz/obrazky/map.svg" alt="Mapa" height="17"></td><td><a href="https://www.google.com/maps/place/49.714269,17.019196/@49.714269,17.019196,12z/data=!4m2!3m1!1s0x0:0x0" title="Přibližná lokalita" rel="nofollow">783 21</a> <a href="https://auto.bazos.cz/inzeraty/chudob%C3%ADn/78321/">Olomouc</a></td></tr>
+<tr><td height="22px" width="25%"><br>Vidělo:</td><td colspan=2><br>133 lidí</td></tr>
+<tr><td height="22px" width="25%"><br>Cena:</td><td colspan=2><br><b><span translate="no">  85 000 Kč</span></b></td></tr>
+</table>
+</td>
+
+<td width="*" valign=top class=listadvpravo>
+
+<table cellpadding="0" cellspacing="1">
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/user.svg" alt="Uživatel" height="17"></td><td><form name="formaction" method="post" style="display: inline;"><input type="hidden" id="postaction" name="postaction" value=""><input type="hidden" id="postv1" name="postv1" value=""><input type="hidden" id="postv2" name="postv2" value=""><input type="hidden" id="postv3" name="postv3" value=""></form>
+<span onclick="odeslatakci('rating','19095053','19098731','Lubom%C3%ADr');return false;" class="paction">Všechny inzeráty a hodnocení uživatele</span></td></tr>
+<tr><td height="22px"><img id="obrfavour" src="https://www.bazos.cz/obrazky/favourite.svg" alt="Oblíbené" height="18"></td><td><span id="favour"><a href="https://www.bazos.cz/oblibene.php" rel="nofollow">Přidat do oblíbených</a></span></td></tr>
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/spam.svg" alt="Spam" height="17"></td><td><span onclick="odeslatakci('spam','226472643');return false;" class="paction">Označit špatný inzerát</span></td></tr>
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/miscat.svg" alt="Chybná kategorie" height="17"></td><td><span onclick="odeslatakci('category','226472643');return false;" class="paction">Označit chybnou kategorii inzerátu</span></td></tr>
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/print.svg" alt="Tisk" height="17"></td><td><a href="#" onclick="window.print()">Vytisknout inzerát</a></td></tr>
+<tr><td height="22px"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fauto.bazos.cz%2Finzerat%2F226472643%2Fcitroen-jumpy-2011-16-hdi-66kw.php" target="_blank" rel="nofollow"><img src="https://www.bazos.cz/obrazky/facebook.svg" alt="Facebook" height="22"></a></td><td><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fauto.bazos.cz%2Finzerat%2F226472643%2Fcitroen-jumpy-2011-16-hdi-66kw.php" target="_blank" rel="nofollow">Sdílejte na Facebooku</a></td></tr>
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/mail.svg" alt="Mail" height="17"></td><td><span onclick="odeslatakci('recommend','226472643');return false;" class="paction">Doporučit kamarádovi</span></td></tr>
+<tr><td height="22px"><img src="https://www.bazos.cz/obrazky/similar.svg" alt="Podobné" height="17"></td><td><a href="https://auto.bazos.cz/inzeraty/citro%C3%ABn-jumpy/">Vyhledat podobné inzeráty</a></td></tr>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<script>
+function nahledy() {
+  var na1 = document.getElementById("nahledy1");
+  var na2 = document.getElementById("nahledy2");
+  var na3 = document.getElementById("nahledy3");
+  var na4 = document.getElementById("nahledy4");
+  if (na1.style.display === "none") {
+    na1.style.display = "block";
+    na2.style.display = "block";
+    na3.style.display = "none";
+    na4.style.display = "none";
+  } else {
+    na1.style.display = "none";
+    na2.style.display = "none";
+    na3.style.display = "block";
+    na4.style.display = "block";
+  }
+}
+</script>
+
+
+<div class="kontaktniformular"><div class="oranzovy" id="overlaymail"><b>Kontaktovat inzerenta emailem</b><br><br>
+Kontaktovat emailem může pouze ověřený uživatel.<br>
+<br>
+Vaše telefonní číslo <span class="ztop">*</span><br>
+<input type="text" name="teloverit2" id="teloverit2" maxlength="30" autocomplete="off" onkeydown="if (event.keyCode == 13) odeslatrequest('/ad-mail.php','idi=226472643&teloverit='+encodeURIComponent(document.getElementById('teloverit2').value),'overlaymail');">
+<br><br>
+<button type="button" id="mailbutton" onclick="odeslatrequest('/ad-mail.php','idi=226472643&teloverit='+encodeURIComponent(document.getElementById('teloverit2').value),'overlaymail');">Odeslat</button>
+</div></div>
+
+
+<br>
+
+<div class="podobne">
+<div id="container_one"></div><br><br><div class="listainzerat"><span onclick="odeslatakci('rating','19095053','19098731','Lubom%C3%ADr');return false;" class="paction">Další inzeráty uživatele</span></div>
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/225615273/hyundai-i30-gd-coupe-14-cvvt-73kw-2013.php"><img src="https://www.bazos.cz/img/1t/273/225615273.jpg?t=1794731370" class="obrazek" alt="Hyundai i30 gd coupe 1.4 cvvt 73kw 2013" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/225615273/hyundai-i30-gd-coupe-14-cvvt-73kw-2013.php">Hyundai i30 gd coupe 1.4 cvvt 73kw 2013</a></span><span class=velikost10> - <span title="TOP 2x Platí do 28.11. 2026" class="ztop">TOP</span> - [16.11. 2026]</span><br>
+<div class=popis>Prodám veškeré díly. Z tohoto vozu. Najeto 150 000</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">   111 Kč</span></b></div>
+<div class="inzeratylok">Šumperk<br>789 85</div>
+<div class="inzeratyview">233 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225615273');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225615273');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19095053','19098731','Lubom%C3%ADr');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225615273','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+<br><br>
+<div class="listainzerat">Podobné inzeráty</div>
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/226383118/prodam-citroen-jumpy-16-hdi-66kw.php"><img src="https://www.bazos.cz/img/1t/118/226383118.jpg" class="obrazek" alt="Prodám Citroën jumpy 1.6 hdi-66kw" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/226383118/prodam-citroen-jumpy-16-hdi-66kw.php">Prodám Citroën jumpy 1.6 hdi-66kw</a></span><span class=velikost10> - [13.11. 2026]</span><br>
+<div class=popis>Prodám uvedené vozidlo v dobrém technickém stavu-bližší informace na tel číslo-momentalne nové zimní pneu-cena-70 000 t.</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  70 000 Kč</span></b></div>
+<div class="inzeratylok">Bruntál<br>794 01</div>
+<div class="inzeratyview">179 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226383118');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226383118');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19695734','Jaroslav');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226383118','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/226305561/citroen-jumpy-16-hdi66-kw1majitel117tkm.php"><img src="https://www.bazos.cz/img/1t/561/226305561.jpg" class="obrazek" alt="Citroën Jumpy, 1.6 HDi,66 kW,1.majitel,117tkm" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/226305561/citroen-jumpy-16-hdi66-kw1majitel117tkm.php">Citroën Jumpy, 1.6 HDi,66 kW,1.majitel,117tkm</a></span><span class=velikost10> - [11.11. 2026]</span><br>
+<div class=popis>Citroën Jumpy,
+1.6 HDi,66 kW,1.majitel,117tkm
+Ojeté, 5/2008, 117 000 km
+109 900 Kč
+
+Bez DPH:
+    90 826 Kč
+
+    Karoserie
+    Skříň
+    Palivo
+    Nafta
+    Objem
+    1 560 ccm
+    Převodovka
+    Manuální
+    Výkon
+    66 kW
+    Bar ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  109 900 Kč</span></b></div>
+<div class="inzeratylok">Plzeň<br>301 00</div>
+<div class="inzeratyview">174 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226305561');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226305561');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19080757','19037904','Roman');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226305561','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/226020514/citroen-jumpy-19d.php"><img src="https://www.bazos.cz/img/1t/514/226020514.jpg?t=1794397054" class="obrazek" alt="Citroën Jumpy 1.9d" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/226020514/citroen-jumpy-19d.php">Citroën Jumpy 1.9d</a></span><span class=velikost10> - [5.11. 2026]</span><br>
+<div class=popis>Prodám Jumpy 1.9d r.v. 2004, nyní po výměně oleje, oleje v převodovce, výměně žhavičů, v září 2025 proveden větší servis: rozvody, alternátor startér, přední brzdy vč. brzdičů, prahy a všeho co bylo potřeba. Chytá na první otočení. Svítí kontrolka ai ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  45 000 Kč</span></b></div>
+<div class="inzeratylok">Louny<br>440 01</div>
+<div class="inzeratyview">407 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','226020514');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','226020514');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','21051280','21241636','Jumpy');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','226020514','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/225784049/citroen-jumpy-88kw-6-rychl-l2-8-mist-vestavba.php"><img src="https://www.bazos.cz/img/1t/049/225784049.jpg" class="obrazek" alt="Citroen Jumpy, 88kw, 6. rychl, L2, 8 míst + vestavba" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/225784049/citroen-jumpy-88kw-6-rychl-l2-8-mist-vestavba.php">Citroen Jumpy, 88kw, 6. rychl, L2, 8 míst + vestavba</a></span><span class=velikost10> - [30.10. 2026]</span><br>
+<div class=popis>Prodám svou cestovatelskou garsonku – prodloužený Citroën Jumpy s osmi sedadly a vestavbou na spaní, viz fotografie.
+Základní údaje:
+Motor 2.0 HDi, výkon 88 kW, šestistupňová manuální převodovka.
+Výroba 10/2009, první registrace 2/2010.
+Najeto 24 ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  130 000 Kč</span></b></div>
+<div class="inzeratylok">Praha - východ<br>294 76</div>
+<div class="inzeratyview">534 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225784049');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225784049');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','20697324','20855242','Lukas');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225784049','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/225779693/citroen-jumpy-16hdi-66kw.php"><img src="https://www.bazos.cz/img/1t/693/225779693.jpg?t=1794757005" class="obrazek" alt="Citroën Jumpy 1.6hdi 66kw" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/225779693/citroen-jumpy-16hdi-66kw.php">Citroën Jumpy 1.6hdi 66kw</a></span><span class=velikost10> - [30.10. 2026]</span><br>
+<div class=popis>Prodám zachovalou dodávku Citroen Jumpy
+
+Verze bez DPF!!!
+
+Motor: 1.6hdi 66kw
+Rok: 2011
+Najeto: 276xxx
+Převodovka: manuální 5.st
+
+Nová STK do 2028
+
+Důvod prodeje horší studené starty nechci to řešit nemám na to čas.
+
+Jinak je vozidlo plně pojízdné a  ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  66 000 Kč</span></b></div>
+<div class="inzeratylok">Mladá Boleslav<br>294 71</div>
+<div class="inzeratyview">548 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225779693');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225779693');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19105660','19112576','Miras');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225779693','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/225727430/citroen-jumpy-16-hdi-uzitkova-dodavka-rok-2009.php"><img src="https://www.bazos.cz/img/1t/430/225727430.jpg?t=1793268947" class="obrazek" alt="CITROËN JUMPY 1.6 HDi – UŽITKOVÁ DODÁVKA, ROK 2009" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/225727430/citroen-jumpy-16-hdi-uzitkova-dodavka-rok-2009.php">CITROËN JUMPY 1.6 HDi – UŽITKOVÁ DODÁVKA, ROK 2009</a></span><span class=velikost10> - <span title="TOP 1x Platí do 5.11. 2026" class="ztop">TOP</span> - [5.11. 2026]</span><br>
+<div class=popis>Prodám plně funkční pracovní dodávku Citroën Jumpy 1.6 HDi.
+
+* Rok výroby: 2009
+* Najeto: 370 000 km
+* Motor: 1.6 HDi, nafta
+* Převodovka: manuální
+* Barva: bílá
+* Prostorný nákladový prostor s přepážkou
+* Bez klimatizace
+
+Vozidlo je pojízd ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">V textu</span></b></div>
+<div class="inzeratylok">Praha - východ<br>251 01</div>
+<div class="inzeratyview">376 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225727430');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225727430');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','0','19301944','Milan');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225727430','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/225198549/napisy-a-monogramy-citroen-na-ruzne-modely.php"><img src="https://www.bazos.cz/img/1t/549/225198549.jpg" class="obrazek" alt="Nápisy a monogramy Citroën na různé modely" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/225198549/napisy-a-monogramy-citroen-na-ruzne-modely.php">Nápisy a monogramy Citroën na různé modely</a></span><span class=velikost10> - [17.10. 2026]</span><br>
+<div class=popis>Prodám různé monogramy na různé modely.
+"C5 Exclusive"
+"DS" - na DS5
+"Jumpy" - Jumpy
+"Picasso" - na Xsaru Picasso
+Lze zaslat i ověřit dle VIN vozu.
+</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">Dohodou</span></b></div>
+<div class="inzeratylok">Žďár nad Sázavou<br>592 14</div>
+<div class="inzeratyview">243 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','225198549');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','225198549');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19140168','19157349','Petra+%C4%8Cejkov%C3%A1');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','225198549','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+<div class="inzeraty inzeratyflex">
+<div class="inzeratynadpis"><a href="https://auto.bazos.cz/inzerat/224681037/citroen-jumpy.php"><img src="https://www.bazos.cz/img/1t/037/224681037.jpg" class="obrazek" alt="Citroën Jumpy" width="170" height="128"></a>
+<span class=nadpis><a href="https://auto.bazos.cz/inzerat/224681037/citroen-jumpy.php">Citroën Jumpy</a></span><span class=velikost10> - [5.10. 2026]</span><br>
+<div class=popis>Prodám Citroën Jumpy, kategorie M1, 1997 ccm, 94kW, NM, počet míst 6-9, datum první registrace: 29.5.2014, stav tachometru: 340 tis. km, motoricky stav dobrý, drobné karosářské vady, klima, plně funkční, pneu zimní dobré, 7/2025 olej, filtry, škrtící ...</div><br><br>
+</div>
+<div class="inzeratycena"><b><span translate="no">  79 900 Kč</span></b></div>
+<div class="inzeratylok">Znojmo<br>671 64</div>
+<div class="inzeratyview">1115 x</div>
+<div class="inzeratyakce">
+<span onclick="odeslatakci('spam','224681037');return false;" class="akce paction">Označit špatný inzerát</span> <span onclick="odeslatakci('category','224681037');return false;" class="akce paction">Chybnou kategorii</span> <span onclick="odeslatakci('rating','19165744','19484666','Possitz+logistic+park');return false;" class="akce paction">Ohodnotit uživatele</span> <span onclick="odeslatakci('edit','224681037','auto');return false;" class="akce paction">Smazat/Upravit/Topovat</span>
+</div>
+</div>
+
+
+</div>
+
+
+</div></div><br>
+
+&copy;2026 Bazoš -  <b>Inzerce, Bazar Citroën</b><br>
+<a href="https://www.bazos.cz/napoveda.php">Nápověda</a>, <a href="https://www.bazos.cz/dotazy.php">Dotazy</a>, <a href="https://www.bazos.cz/hodnoceni.php">Hodnocení</a>, <a href="https://www.bazos.cz/kontakt.php">Kontakt</a>, <a href="https://www.bazos.cz/reklama.php">Reklama</a>, <a href="https://www.bazos.cz/podminky.php">Podmínky</a>, <a href="https://www.bazos.cz/ochrana-udaju.php">Ochrana údajů</a>, <a href="https://www.bazos.cz/rss.php?rub=au&cat=82">RSS</a>, <form name="formvkm" id="formvkm" method="post" style="display: inline;"><input type="hidden" name="vkm" value="m"><input type="submit" class="vkm" value="Mobilní verze"></form><br>
+
+Inzeráty Auto celkem: <b>435815</b>, za 24 hodin: <b>25897</b><br><br>
+<a href="https://www.bazos.cz/mapa-kategorie.php">Mapa kategorií</a>, <a href="https://auto.bazos.cz/mapa-search.php">Nejvyhledávanější výrazy</a>
+<br>
+Země: <a href="https://auto.bazos.cz">Česká republika</a>, <a href="https://auto.bazos.sk">Slovensko</a>, <a href="https://auto.bazos.pl">Polsko</a>, <a href="https://auto.bazos.at">Rakousko</a>
+<br>
+<br>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZW1QTHKBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NZW1QTHKBB');
+</script>
+
+</body>
+</html>
